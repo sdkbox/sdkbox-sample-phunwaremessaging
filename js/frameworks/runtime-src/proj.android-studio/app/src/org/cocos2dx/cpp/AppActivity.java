@@ -1,6 +1,6 @@
 /****************************************************************************
 Copyright (c) 2015 Chukong Technologies Inc.
- 
+
 http://www.cocos2d-x.org
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
@@ -21,7 +21,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ****************************************************************************/
-package org.cocos2dx.cpp;
+package org.cocos2dx.javascript;
 
 import org.cocos2dx.lib.Cocos2dxActivity;
 
