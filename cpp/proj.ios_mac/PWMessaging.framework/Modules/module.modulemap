@@ -1,0 +1,6 @@
+framework module PWMessaging {
+  umbrella header "PWMessaging.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,19 @@
+{
+    "android": {
+        "PhunwareMessaging": {
+            "debug": true, 
+            "access_key": "7b130f52131153a18f963beb4d7798b859242631", 
+            "env": "prod", 
+            "api_id": "1588", 
+            "signature_key": "b088c0e837687fa5818dd6ad36b61cc0dba4b566"
+        }
+    }, 
+    "ios": {
+        "PhunwareMessaging": {
+            "debug": true, 
+            "access_key": "c85cef944819246e5ac5c979fd405c51f008a1e6", 
+            "api_id": "1584", 
+            "signature_key": "3dfbcdce51247a0da2299318c4b59afaa871ae27"
+        }
+    }
+}

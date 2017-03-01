@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C194318AD059C0491BE3B86 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D7341F08918566AB4041C70 /* libsqlite3.tbd */; };
 		11E94508A2963B2E50541227 /* res in Resources */ = {isa = PBXBuildFile; fileRef = 847C4737BB87694BD4544EE6 /* res */; };
 		1D60589F0D05DD5A006BFB54 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D30AB110D05D00D00671497 /* Foundation.framework */; };
 		1DF5F4E00D08C38300B7A737 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1DF5F4DF0D08C38300B7A737 /* UIKit.framework */; };
@@ -14,6 +15,7 @@
 		46880B8819C43A87006E1F66 /* AppDelegate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8419C43A87006E1F66 /* AppDelegate.cpp */; };
 		46880B8A19C43A87006E1F66 /* HelloWorldScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */; };
 		4AF24228B721699D68B0EB58 /* libcocos2d iOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EC054D038170C9031CB136DE /* libcocos2d iOS.a */; };
+		4D5C44008EADD829AD12F4F0 /* PWMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E3A43C49F6749A31FE8A0F9 /* PWMessaging.framework */; };
 		503AE10017EB989F00D1A890 /* AppController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FB17EB989F00D1A890 /* AppController.mm */; };
 		503AE10117EB989F00D1A890 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FC17EB989F00D1A890 /* main.m */; };
 		503AE10217EB989F00D1A890 /* RootViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 503AE0FF17EB989F00D1A890 /* RootViewController.mm */; };
@@ -36,26 +38,41 @@
 		521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6219F0C34300D177D7 /* Default-667h@2x.png */; };
 		521A8E6519F0C34300D177D7 /* Default-736h@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 521A8E6319F0C34300D177D7 /* Default-736h@3x.png */; };
 		52B47A471A53D09C004E4C60 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B47A461A53D09B004E4C60 /* Security.framework */; };
+		5B834CBDBF13DC8B208D9D5A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 866246A4B30978FF50AD1E73 /* MobileCoreServices.framework */; };
+		671D4C7F997BF53D4188731C /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B04F44BFA715A2DE71658B61 /* CoreTelephony.framework */; };
+		734148B9885345046966BE64 /* GameController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0FF143FD92C598872C5EC753 /* GameController.framework */; };
+		99AF4D919805F9EBD34D2951 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 76E04228988ED849FF23CE42 /* libz.tbd */; };
+		9FD747DA8E4EF64605D2347A /* PWCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7846598EDB0C77608205AB /* PWCore.framework */; };
+		B9FE4939AE1B816FC60FF7AA /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E594B5286D13801F166CB16 /* SystemConfiguration.framework */; };
 		BF171245129291EC00B8313A /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB012928DE900B8313A /* OpenGLES.framework */; };
 		BF1712471292920000B8313A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BF170DB412928DE900B8313A /* libz.dylib */; };
 		BF1C47F01293687400B63C5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1C47EA1293683800B63C5D /* QuartzCore.framework */; };
+		D2234E04B7385A5C920F70D8 /* sdkbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FD04F3281BCE30C715E3683 /* sdkbox.framework */; };
 		D44C620C132DFF330009C878 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620B132DFF330009C878 /* OpenAL.framework */; };
 		D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620D132DFF430009C878 /* AVFoundation.framework */; };
 		D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D44C620F132DFF4E0009C878 /* AudioToolbox.framework */; };
 		D6B0611B1803AB670077942B /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D6B0611A1803AB670077942B /* CoreMotion.framework */; };
+		D87A4D7BA87B8CD5EB268A52 /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D078444AA205C2D0BA2D7CCE /* MediaPlayer.framework */; };
+		DD2B438FA468A7C0F49C8B5D /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9362490C9F4361B9A294EA56 /* CoreLocation.framework */; };
 		ED545A7C1B68A1F400C3958E /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = ED545A7B1B68A1F400C3958E /* libiconv.dylib */; };
+		EF3C42F7AC43BD662E2C6ED7 /* PluginPhunwareMessaging.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7A84B30B08445FEA9B9500F /* PluginPhunwareMessaging.framework */; };
+		F9DF457B94AF38A189CE0679 /* sdkbox_config.json in Resources */ = {isa = PBXBuildFile; fileRef = 87094F36AD38BD79790F0EC6 /* sdkbox_config.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0FF143FD92C598872C5EC753 /* GameController.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GameController.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/GameController.framework; sourceTree = DEVELOPER_DIR; };
 		1ACB3243164770DE00914215 /* libcurl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libcurl.a; path = ../../cocos2dx/platform/third_party/ios/libraries/libcurl.a; sourceTree = "<group>"; };
 		1D30AB110D05D00D00671497 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		1D6058910D05DD3D006BFB54 /* phunwaremessaging_cpp-mobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "phunwaremessaging_cpp-mobile.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D7341F08918566AB4041C70 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = file.tbd; name = libsqlite3.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libsqlite3.tbd; sourceTree = DEVELOPER_DIR; };
 		1DF5F4DF0D08C38300B7A737 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		288765A40DF7441C002DB57D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3E3A43C49F6749A31FE8A0F9 /* PWMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PWMessaging.framework; sourceTree = SOURCE_ROOT; };
 		46880B8419C43A87006E1F66 /* AppDelegate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AppDelegate.cpp; sourceTree = "<group>"; };
 		46880B8519C43A87006E1F66 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		46880B8619C43A87006E1F66 /* HelloWorldScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWorldScene.cpp; sourceTree = "<group>"; };
 		46880B8719C43A87006E1F66 /* HelloWorldScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelloWorldScene.h; sourceTree = "<group>"; };
+		4E594B5286D13801F166CB16 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/SystemConfiguration.framework; sourceTree = DEVELOPER_DIR; };
 		503AE0FA17EB989F00D1A890 /* AppController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppController.h; path = ios/AppController.h; sourceTree = SOURCE_ROOT; };
 		503AE0FB17EB989F00D1A890 /* AppController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppController.mm; path = ios/AppController.mm; sourceTree = SOURCE_ROOT; };
 		503AE0FC17EB989F00D1A890 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ios/main.m; sourceTree = SOURCE_ROOT; };
@@ -86,11 +103,20 @@
 		521A8E6219F0C34300D177D7 /* Default-667h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-667h@2x.png"; sourceTree = "<group>"; };
 		521A8E6319F0C34300D177D7 /* Default-736h@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-736h@3x.png"; sourceTree = "<group>"; };
 		52B47A461A53D09B004E4C60 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.1.sdk/System/Library/Frameworks/Security.framework; sourceTree = DEVELOPER_DIR; };
+		5B7846598EDB0C77608205AB /* PWCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PWCore.framework; sourceTree = SOURCE_ROOT; };
+		76E04228988ED849FF23CE42 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = file.tbd; name = libz.tbd; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/usr/lib/libz.tbd; sourceTree = DEVELOPER_DIR; };
 		8262943D1AAF051F00CB7CF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		847C4737BB87694BD4544EE6 /* res */ = {isa = PBXFileReference; lastKnownFileType = "?"; name = res; path = ../Resources/res; sourceTree = "<group>"; };
+		866246A4B30978FF50AD1E73 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		87094F36AD38BD79790F0EC6 /* sdkbox_config.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = sdkbox_config.json; path = ../Resources/sdkbox_config.json; sourceTree = SOURCE_ROOT; };
+		9362490C9F4361B9A294EA56 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreLocation.framework; sourceTree = DEVELOPER_DIR; };
+		9FCD54F21E65B9F500F8F9E4 /* phunwaremessaging_cpp-mobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "phunwaremessaging_cpp-mobile.entitlements"; sourceTree = "<group>"; };
+		9FD04F3281BCE30C715E3683 /* sdkbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = sdkbox.framework; sourceTree = SOURCE_ROOT; };
+		B04F44BFA715A2DE71658B61 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/CoreTelephony.framework; sourceTree = DEVELOPER_DIR; };
 		BF170DB012928DE900B8313A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		BF170DB412928DE900B8313A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BF1C47EA1293683800B63C5D /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		D078444AA205C2D0BA2D7CCE /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS.sdk/System/Library/Frameworks/MediaPlayer.framework; sourceTree = DEVELOPER_DIR; };
 		D44C620B132DFF330009C878 /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
 		D44C620D132DFF430009C878 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		D44C620F132DFF4E0009C878 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -98,6 +124,7 @@
 		EC054D038170C9031CB136DE /* libcocos2d iOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libcocos2d iOS.a"; path = "$(SRCROOT)/../../../sdkbox-cocos2d-x-binary/prebuilt/ios/libcocos2d iOS.a"; sourceTree = "<absolute>"; };
 		ED545A7B1B68A1F400C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.4.sdk/usr/lib/libiconv.dylib; sourceTree = DEVELOPER_DIR; };
 		ED545A7D1B68A1FA00C3958E /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		F7A84B30B08445FEA9B9500F /* PluginPhunwareMessaging.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = PluginPhunwareMessaging.framework; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +145,18 @@
 				D44C620E132DFF430009C878 /* AVFoundation.framework in Frameworks */,
 				D44C6210132DFF4E0009C878 /* AudioToolbox.framework in Frameworks */,
 				4AF24228B721699D68B0EB58 /* libcocos2d iOS.a in Frameworks */,
+				D2234E04B7385A5C920F70D8 /* sdkbox.framework in Frameworks */,
+				EF3C42F7AC43BD662E2C6ED7 /* PluginPhunwareMessaging.framework in Frameworks */,
+				DD2B438FA468A7C0F49C8B5D /* CoreLocation.framework in Frameworks */,
+				99AF4D919805F9EBD34D2951 /* libz.tbd in Frameworks */,
+				0C194318AD059C0491BE3B86 /* libsqlite3.tbd in Frameworks */,
+				B9FE4939AE1B816FC60FF7AA /* SystemConfiguration.framework in Frameworks */,
+				9FD747DA8E4EF64605D2347A /* PWCore.framework in Frameworks */,
+				4D5C44008EADD829AD12F4F0 /* PWMessaging.framework in Frameworks */,
+				734148B9885345046966BE64 /* GameController.framework in Frameworks */,
+				D87A4D7BA87B8CD5EB268A52 /* MediaPlayer.framework in Frameworks */,
+				5B834CBDBF13DC8B208D9D5A /* MobileCoreServices.framework in Frameworks */,
+				671D4C7F997BF53D4188731C /* CoreTelephony.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -150,6 +189,7 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
+				9FCD54F21E65B9F500F8F9E4 /* phunwaremessaging_cpp-mobile.entitlements */,
 				46880B8319C43A87006E1F66 /* Classes */,
 				46880B7519C43A67006E1F66 /* Resources */,
 				29B97323FDCFA39411CA2CEA /* Frameworks */,
@@ -182,6 +222,18 @@
 				BF170DB012928DE900B8313A /* OpenGLES.framework */,
 				BF1C47EA1293683800B63C5D /* QuartzCore.framework */,
 				1DF5F4DF0D08C38300B7A737 /* UIKit.framework */,
+				9FD04F3281BCE30C715E3683 /* sdkbox.framework */,
+				F7A84B30B08445FEA9B9500F /* PluginPhunwareMessaging.framework */,
+				9362490C9F4361B9A294EA56 /* CoreLocation.framework */,
+				76E04228988ED849FF23CE42 /* libz.tbd */,
+				1D7341F08918566AB4041C70 /* libsqlite3.tbd */,
+				4E594B5286D13801F166CB16 /* SystemConfiguration.framework */,
+				5B7846598EDB0C77608205AB /* PWCore.framework */,
+				3E3A43C49F6749A31FE8A0F9 /* PWMessaging.framework */,
+				0FF143FD92C598872C5EC753 /* GameController.framework */,
+				D078444AA205C2D0BA2D7CCE /* MediaPlayer.framework */,
+				866246A4B30978FF50AD1E73 /* MobileCoreServices.framework */,
+				B04F44BFA715A2DE71658B61 /* CoreTelephony.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				847C4737BB87694BD4544EE6 /* res */,
+				87094F36AD38BD79790F0EC6 /* sdkbox_config.json */,
 			);
 			name = Resources;
 			path = ../Resources;
@@ -269,6 +322,19 @@
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0500;
+				TargetAttributes = {
+					1D6058900D05DD3D006BFB54 = {
+						DevelopmentTeam = LNN652W6T6;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "phunwaremessaging_cpp" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -313,6 +379,7 @@
 				521A8E6419F0C34300D177D7 /* Default-667h@2x.png in Resources */,
 				50EF629717ECD46A001EB2F8 /* Icon-58.png in Resources */,
 				11E94508A2963B2E50541227 /* res in Resources */,
+				F9DF457B94AF38A189CE0679 /* sdkbox_config.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,9 +405,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_ENTITLEMENTS = "phunwaremessaging_cpp-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = LNN652W6T6;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -358,12 +428,21 @@
 					"$(SRCROOT)/../../../sdkbox-cocos2d-x-binary/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = " $(SRCROOT)/../../../sdkbox-cocos2d-x-binary/prebuilt/ios";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../sdkbox-cocos2d-x-binary/prebuilt/ios",
+					"\"sdkbox.framework\"",
+					"\"PluginPhunwareMessaging.framework\"",
+					"\"PWCore.framework\"",
+					"\"PWMessaging.framework\"",
+				);
+				OTHER_CFLAGS = "-DSDKBOX_ENABLED";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2dx.phunwaremessaging;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";
@@ -375,9 +454,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
+				CODE_SIGN_ENTITLEMENTS = "phunwaremessaging_cpp-mobile.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COMPRESS_PNG_FILES = NO;
+				DEVELOPMENT_TEAM = LNN652W6T6;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = "\"$(SRCROOT)\"";
 				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = ios/Prefix.pch;
@@ -393,12 +475,21 @@
 					"$(SRCROOT)/../../../sdkbox-cocos2d-x-binary/cocos/platform/ios/Simulation",
 				);
 				INFOPLIST_FILE = ios/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				LIBRARY_SEARCH_PATHS = " $(SRCROOT)/../../../sdkbox-cocos2d-x-binary/prebuilt/ios";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(SRCROOT)/../../../sdkbox-cocos2d-x-binary/prebuilt/ios",
+					"\"sdkbox.framework\"",
+					"\"PluginPhunwareMessaging.framework\"",
+					"\"PWCore.framework\"",
+					"\"PWMessaging.framework\"",
+				);
+				OTHER_CFLAGS = "-DSDKBOX_ENABLED";
 				OTHER_LDFLAGS = (
 					"$(_COCOS_LIB_IOS_BEGIN)",
 					"$(_COCOS_LIB_IOS_END)",
+					"-ObjC",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.cocos2dx.phunwaremessaging;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				USER_HEADER_SEARCH_PATHS = "$(_COCOS_HEADER_IOS_BEGIN) $(_COCOS_HEADER_IOS_END)";

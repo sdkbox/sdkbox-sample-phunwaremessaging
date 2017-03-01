@@ -27,8 +27,46 @@
 #import "cocos2d.h"
 #import "AppDelegate.h"
 #import "RootViewController.h"
+#import <PWMessaging/PWMessaging.h>
 
 @implementation AppController
+
+- (void)application:(UIApplication *)application didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    // Notify Localpoint the app succeed to register for remote notification
+    [PWMessaging didRegisterForRemoteNotificationsWithDeviceToken:deviceToken];
+}
+
+- (void)application:(UIApplication *)application didFailToRegisterForRemoteNotificationsWithError:(NSError *)error {
+    // Notify Localpoint the app fail to register for remote notification
+    [PWMessaging didFailToRegisterForRemoteNotificationsWithError:error];
+}
+
+- (void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification {
+    // Handle the local notification
+    [PWMessaging didReceiveLocalNotification:notification withNotificationHandler:^(PWMSGLocalNotification *notification) {
+        if (notification) {
+            // Deep linking
+            NSLog(@"Note: %@", notification.alertBody);
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
+    // Notify Localpoint the app receives a remote notificaiton
+    [PWMessaging didReceiveRemoteNotification:userInfo withNotificationHandler:^(PWMSGLocalNotification *notification) {
+        if (notification) {
+            // Deep linking
+            NSLog(@"Note: %@", notification.alertBody);
+        }
+    }];
+}
+
+- (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+
+    [PWMessaging didReceiveRemoteNotification:userInfo fetchCompletionHandler:completionHandler withNotificationHandler:^(PWMSGLocalNotification *notification) {
+        NSLog(@"Note: %@", notification.alertBody);
+    }];
+}
 
 #pragma mark -
 #pragma mark Application lifecycle

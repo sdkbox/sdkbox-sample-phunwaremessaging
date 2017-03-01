@@ -1,7 +1,27 @@
 
 #include "HelloWorldScene.h"
 
+#include "PluginPhunwareMessaging/PluginPhunwareMessaging.h"
+using namespace sdkbox;
+
 USING_NS_CC;
+
+
+MenuItemFont *deviceIdMenuItem = 0;
+class CustomListener : public sdkbox::PhunwareMessagingListener {
+public:
+    void init(bool success, const std::string& message) {
+        CCLOG("success=%s, message=%s", success ? "yes" : "no", message.c_str());
+
+        if (deviceIdMenuItem) {
+            deviceIdMenuItem->setString("deviceID="+sdkbox::PluginPhunwareMessaging::deviceId());
+        }
+    }
+    void error(const std::string& message) {
+        CCLOG("error=%s", message.c_str());
+    }
+    
+};
 
 Scene* HelloWorld::createScene()
 {
@@ -56,21 +76,34 @@ bool HelloWorld::init()
 
 void HelloWorld::createTestMenu()
 {
-    auto menu = Menu::create();
+    MenuItemFont::setFontName("sans");
+    MenuItemFont::setFontSize(16);
 
-    menu->addChild(MenuItemLabel::create(Label::createWithSystemFont("Test Item 1", "sans", 24), [](Ref*){
-        CCLOG("Test Item 1");
-    }));
+    sdkbox::PluginPhunwareMessaging::setListener(new CustomListener());
+//    sdkbox::PluginPhunwareMessaging::init();
 
-    menu->addChild(MenuItemLabel::create(Label::createWithSystemFont("Test Item 2", "sans", 24), [](Ref*){
-        CCLOG("Test Item 2");
-    }));
+    deviceIdMenuItem = MenuItemFont::create("deviceID="+sdkbox::PluginPhunwareMessaging::deviceId());
 
-    menu->addChild(MenuItemLabel::create(Label::createWithSystemFont("Test Item 3", "sans", 24), [](Ref*){
-        CCLOG("Test Item 3");
-    }));
-
+    auto menu = Menu::create(
+                             deviceIdMenuItem,
+                             MenuItemFont::create("serviceName="+sdkbox::PluginPhunwareMessaging::serviceName()),
+                             MenuItemFont::create("pw version="+sdkbox::PluginPhunwareMessaging::version()),
+                             MenuItemFont::create("messages", [](Ref*){
+        std::vector<sdkbox::PWZoneMessage> msgs = PluginPhunwareMessaging::messages();
+        for (auto item : msgs) {
+            CCLOG("isRead=%s", item.isRead ? "yes" : "no");
+            CCLOG("alertTitle=%s", item.alertTitle.c_str());
+            CCLOG("alertBody=%s", item.alertBody.c_str());
+            CCLOG("promotionTitle=%s", item.promotionTitle.c_str());
+            CCLOG("promotionBody=%s", item.promotionBody.c_str());
+            CCLOG("identifier=%s", item.identifier.c_str());
+            CCLOG("campaignType=%s", item.campaignType.c_str());
+            CCLOG("\n");
+        }
+    }), NULL);
     menu->alignItemsVerticallyWithPadding(10);
     addChild(menu);
+    
+
 }
 
