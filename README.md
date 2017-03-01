@@ -1,6 +1,8 @@
 
 # How to run sdkbox samples
 
+**NOTE**: PhunwareMessaging does not support android project, only android studio project.
+
 Steps:
 
 ~~~bash
@@ -16,8 +18,9 @@ git clone --depth 1 https://github.com/sdkbox/sdkbox-sample-phunwaremessaging.gi
 # run sample with specified language and platform
 # eg: cpp and ios
 ./sdkbox-cocos2d-x-binary/run_sample.sh phunwaremessaging cpp ios
-# javascript and android
-./sdkbox-cocos2d-x-binary/run_sample.sh phunwaremessaging js android
+
+# javascript and android studio
+cd js && cocos run -p android --android-studio -j 8
 
 # <optional> if exists "download-depends.sh" in sample repo, execute it
 # ./sdkbox-sample-phunwaremessaging/download-depends.sh
