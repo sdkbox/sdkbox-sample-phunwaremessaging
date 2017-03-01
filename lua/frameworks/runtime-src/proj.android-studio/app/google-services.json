@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "920512025982",
+    "firebase_url": "https://phunwaremessaging.firebaseio.com",
+    "project_id": "phunwaremessaging",
+    "storage_bucket": "phunwaremessaging.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:920512025982:android:ead12160067ce559",
+        "android_client_info": {
+          "package_name": "org.cocos2dx.phunwaremessaging"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "920512025982-jl8l4olntigsf4j3a62qf159khq3tru8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASsg5l-DwBeDqCXwiTqzPzir9cBtI9WLw"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
