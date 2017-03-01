@@ -6,10 +6,8 @@
 //  Copyright © 2016 Phunware Inc. All rights reserved.
 //
 
-//@import UIKit;
-//@import Foundation;
-#import <UIKit/UIKit.h>
-#import <Foundation/Foundation.h>
+@import UIKit;
+@import Foundation;
 
 #import <PWMessaging/PWMSGGeozone.h>
 #import <PWMessaging/PWMSGZoneMessage.h>

@@ -5,8 +5,7 @@
 //  Copyright (c) 2015 Phunware, Inc. All rights reserved.
 //
 
-//@import Foundation;
-#import <Foundation/Foundation.h>
+@import Foundation;
 
 /**
  * A block that will be called after the attributes are updated in the server.
