@@ -31,6 +31,7 @@
 #import "RootViewController.h"
 #import "platform/ios/CCEAGLView-ios.h"
 #import <PWMessaging/PWMessaging.h>
+#import <PWMessaging/PWMessaging.h>
 
 @implementation AppController
 
@@ -124,7 +125,16 @@ static AppDelegate s_sharedApplication;
     cocos2d::Director::getInstance()->setOpenGLView(glview);
 
     app->run();
+    
+    [PWMessaging didFinishLaunchingWithOptions:launchOptions withCompletionHandler:^BOOL(PWMSGLocalNotification *notification) {
+        if (notification) {
+            NSLog(@"Note: %@", notification.alertBody);
+        }
+        return YES;
+    }];
+
     return YES;
+
 }
 
 

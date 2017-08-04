@@ -27,23 +27,27 @@ var HelloWorldLayer = cc.Layer.extend({
         // menu.y = size.height / 2 + 16;
         // this.addChild(menu);
 
+        sdkbox.PluginPhunwareMessaging.init();
+        sdkbox.PluginPhunwareMessaging.setListener({
+            init : function(success, message) { cc.log("init:" + message)},
+            error: function(message) { cc.og("error:"+message)},
+        });
+
         return true;
     },
 
     createTestMenu:function() {
         var menu = new cc.Menu();
 
-        var item1 = new cc.MenuItemLabel(new cc.LabelTTF("Test Item 1", "sans", 28), function() {
-            cc.log("Test Item 1");
+        var item1 = new cc.MenuItemLabel(new cc.LabelTTF(sdkbox.PluginPhunwareMessaging.deviceId(), "sans", 28), function() {
         });
         menu.addChild(item1);
 
-        var item2 = new cc.MenuItemLabel(new cc.LabelTTF("Test Item 2", "sans", 28), function() {
-            cc.log("Test Item 2");
+        var item2 = new cc.MenuItemLabel(new cc.LabelTTF(sdkbox.PluginPhunwareMessaging.serviceName(), "sans", 28), function() {
         });
         menu.addChild(item2);
 
-        var item3 = new cc.MenuItemLabel(new cc.LabelTTF("Test Item 3", "sans", 28), function() {
+        var item3 = new cc.MenuItemLabel(new cc.LabelTTF(sdkbox.PluginPhunwareMessaging.version(), "sans", 28), function() {
             cc.log("Test Item 3");
         });
         menu.addChild(item3);

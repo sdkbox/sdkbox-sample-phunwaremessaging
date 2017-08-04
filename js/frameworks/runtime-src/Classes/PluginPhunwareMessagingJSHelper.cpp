@@ -51,7 +51,7 @@ public:
 
     std::string _name;
 
-    jsval _paramVal[2];
+    JS::Value _paramVal[2];
     int _paramLen;
 };
 
@@ -70,20 +70,20 @@ public:
     virtual void init(bool success, const std::string& message)   {
         PhunwareMessaging_CallbackJS* cb = new PhunwareMessaging_CallbackJS();
         cb->_name = __FUNCTION__;
-        cb->_paramVal[0] = BOOLEAN_TO_JSVAL(success);
-        cb->_paramVal[1] = std_string_to_jsval(s_cx, message);
+        cb->_paramVal[0] = JS::BooleanValue(success);
+        cb->_paramVal[1] = SB_STR_TO_JSVAL(s_cx, message);
         cb->_paramLen = 2;
         cb->schedule();
     }
     virtual void error(const std::string& message)  {
         PhunwareMessaging_CallbackJS* cb = new PhunwareMessaging_CallbackJS();
         cb->_name = __FUNCTION__;
-        cb->_paramVal[0] = std_string_to_jsval(s_cx, message);
+        cb->_paramVal[0] = SB_STR_TO_JSVAL(s_cx, message);
         cb->_paramLen = 1;
         cb->schedule();
     }
 
-    void invokeJS(const char* func, jsval* pVals, int valueSize) {
+    void invokeJS(const char* func, JS::Value* pVals, int valueSize) {
         if (!s_cx) {
             return;
         }
@@ -112,7 +112,7 @@ public:
             if(!JS_GetProperty(cx, obj, func_name, &func_handle)) {
                 return;
             }
-            if(func_handle == JSVAL_VOID) {
+            if(func_handle == JS::NullValue()) {
                 return;
             }
 
@@ -166,7 +166,7 @@ void PhunwareMessaging_CallbackJS::notityJs(float dt) {
 
 #if defined(MOZJS_MAJOR_VERSION)
 #if MOZJS_MAJOR_VERSION >= 33
-bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_setListener(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_setListener(JSContext *cx, uint32_t argc, JS::Value *vp)
 #else
 bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_setListener(JSContext *cx, uint32_t argc, jsval *vp)
 #endif
@@ -194,7 +194,7 @@ JSBool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_setListener(JSContex
         args.rval().setUndefined();
         return true;
     }
-    JS_ReportError(cx, "js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_setIAPListener : wrong number of arguments");
+    JS_ReportErrorUTF8(cx, "js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_setIAPListener : wrong number of arguments");
     return false;
 }
 
@@ -204,7 +204,8 @@ void phunwaremessaging_set_constants(JSContext* cx, const JS::RootedObject& obj,
 void phunwaremessaging_set_constants(JSContext* cx, JSObject* obj, const std::string& name, const std::map<std::string, int>& params)
 #endif
 {
-    jsval val = sdkbox::std_map_string_int_to_jsval(cx, params);
+    JS::RootedValue val(cx);
+    sdkbox::std_map_string_int_to_jsval(cx, params, &val);
 
     JS::RootedValue rv(cx);
     rv = val;
@@ -231,7 +232,7 @@ void phunwaremessaging_register_constants(JSContext* cx, JSObject* obj)
 
 
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_messages(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_messages(JSContext *cx, uint32_t argc, JS::Value *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     if (argc == 0) {
@@ -249,18 +250,10 @@ bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_messages(JSContext *cx
             index++;
         }
 
-        jsval jsret = JSVAL_NULL;
-        do {
-            if (jarr) {
-                jsret = OBJECT_TO_JSVAL(jarr);
-            } else {
-                jsret = JSVAL_NULL;
-            }
-        } while (0);
-        args.rval().set(jsret);
+        args.rval().set(JS::ObjectValue(*jarr));
         return true;
     }
-    JS_ReportError(cx, "js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_messages : wrong number of arguments");
+    JS_ReportErrorUTF8(cx, "js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_messages : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
@@ -292,14 +285,14 @@ JSBool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_messages(JSContext *
         JS_SET_RVAL(cx, vp, jsret);
         return JS_TRUE;
     }
-    JS_ReportError(cx, "wrong number of arguments");
+    JS_ReportErrorUTF8(cx, "wrong number of arguments");
     return JS_FALSE;
 }
 #endif
 
 
 #if defined(MOZJS_MAJOR_VERSION)
-bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_geozones(JSContext *cx, uint32_t argc, jsval *vp)
+bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_geozones(JSContext *cx, uint32_t argc, JS::Value *vp)
 {
     JS::CallArgs args = JS::CallArgsFromVp(argc, vp);
     if (argc == 0) {
@@ -317,18 +310,10 @@ bool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_geozones(JSContext *cx
             index++;
         }
 
-        jsval jsret = JSVAL_NULL;
-        do {
-            if (jarr) {
-                jsret = OBJECT_TO_JSVAL(jarr);
-            } else {
-                jsret = JSVAL_NULL;
-            }
-        } while (0);
-        args.rval().set(jsret);
+        args.rval().set(JS::ObjectValue(*jarr));
         return true;
     }
-    JS_ReportError(cx, "js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_geozones : wrong number of arguments");
+    JS_ReportErrorUTF8(cx, "js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_geozones : wrong number of arguments");
     return false;
 }
 #elif defined(JS_VERSION)
@@ -360,7 +345,7 @@ JSBool js_PluginPhunwareMessagingJS_PluginPhunwareMessaging_geozones(JSContext *
         JS_SET_RVAL(cx, vp, jsret);
         return JS_TRUE;
     }
-    JS_ReportError(cx, "wrong number of arguments");
+    JS_ReportErrorUTF8(cx, "wrong number of arguments");
     return JS_FALSE;
 }
 #endif

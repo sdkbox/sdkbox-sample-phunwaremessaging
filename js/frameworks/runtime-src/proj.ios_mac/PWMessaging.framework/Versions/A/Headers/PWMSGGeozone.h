@@ -5,8 +5,10 @@
 //  Copyright (c) 2015 Phunware, Inc. All rights reserved.
 //
 
-@import Foundation;
-@import CoreLocation;
+#import <Foundation/Foundation.h>
+#import <CoreLocation/CoreLocation.h>
+//@import Foundation;
+//@import CoreLocation;
 
 #import "PWMSGZoneProtocol.h"
 
